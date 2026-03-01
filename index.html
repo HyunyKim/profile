@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoDiet Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-a: #ffd36a;
+      --bg-b: #6fd497;
+      --text-main: #143026;
+      --text-sub: #355b4d;
+      --card-bg: rgba(255, 255, 255, 0.8);
+      --card-border: rgba(255, 255, 255, 0.95);
+      --shadow: 0 24px 60px rgba(17, 64, 44, 0.2);
+      --accent: #2f9f62;
+      --accent-dark: #22784a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Manrope", sans-serif;
+      color: var(--text-main);
+      background:
+        radial-gradient(1200px 700px at -10% 0%, #fff0c2 0%, transparent 45%),
+        radial-gradient(900px 500px at 120% 100%, #66d0ae 0%, transparent 50%),
+        linear-gradient(135deg, var(--bg-a), var(--bg-b));
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .panel {
+      width: min(920px, 100%);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 18px;
+      align-items: center;
+      padding: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1d5f3d;
+      background: #e6f7ed;
+      padding: 7px 12px;
+      border-radius: 999px;
+    }
+
+    h1 {
+      margin: 12px 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.1;
+    }
+
+    .description {
+      margin: 0 0 20px;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text-sub);
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 11px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(47, 159, 98, 0.28);
+    }
+
+    .btn.ghost {
+      background: #fff;
+      color: #194a35;
+      border: 1px solid #d4eadf;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .artboard {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      gap: 12px;
+    }
+
+    .art {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 10px;
+      border: 1px solid #e5efe9;
+      box-shadow: 0 12px 26px rgba(31, 86, 58, 0.14);
+      animation: float 3.5s ease-in-out infinite;
+    }
+
+    .art:nth-child(2) {
+      animation-delay: 0.35s;
+    }
+
+    .art img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 14px;
+      object-fit: cover;
+      display: block;
+      background: #ecf5f0;
+    }
+
+    .meta {
+      border-top: 1px solid #dcebe2;
+      padding: 16px 32px 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: #2f5648;
+      font-size: 14px;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+
+      .meta {
+        padding: 14px 24px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <section class="hero">
+      <div>
+        <span class="badge">PhotoDiet</span>
+        <h1>PhotoDiet Support</h1>
+        <p class="description">
+          Need help using PhotoDiet? Reach out anytime and we will get back to you quickly.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:kjhhaha@gmail.com">Email Support</a>
+          <a class="btn ghost" href="mailto:kjhhaha@gmail.com?subject=PhotoDiet%20Support%20Request">Open Ticket</a>
+        </div>
+      </div>
+
+      <div class="artboard">
+        <div class="art">
+          <img src="assets/app-icon.png" alt="PhotoDiet app icon">
+        </div>
+        <div class="art">
+          <img src="assets/rhino.png" alt="Rhino character">
+        </div>
+      </div>
+    </section>
+
+    <section class="meta">
+      <span>Support email: kjhhaha@gmail.com</span>
+      <span>Made for App Store Support URL</span>
+    </section>
+  </main>
+</body>
+</html>
